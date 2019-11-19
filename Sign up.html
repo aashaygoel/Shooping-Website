@@ -1,0 +1,60 @@
+<html>
+<head>
+<title> Signup Form </title>   
+    <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript">
+      function Validate() {
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("password2").value;
+        var username= document.getElementById("username").value;
+        var email= document.getElementById("email").value;
+        if(username.length==0)
+        {
+          alert("please enter username");
+        }
+        else if(email.length==0)
+        {
+          alert("please enter email");
+        }
+         else if(password.length==0)
+        {
+          alert("please enter password");
+        }
+       else if (password != confirmPassword) 
+       {
+            alert("Passwords do not match.");
+          }
+        else
+        {
+          return window.parent.open('new.html');
+}} </script>
+</head>
+<body method="post">
+
+    <div id="login-box">
+      <div class="left-box">
+        <h1> Sign Up</h1>
+        <form>
+          <input type="text" name="username" placeholder="Username" id="username">
+          <input type="email" name="email" placeholder="Email" id="email" >
+          <input type="date" name="DOB" placeholder="DOB"/>
+          <input type="text" name="number" placeholder="number" id="number">
+          <input type="password" name="password" placeholder="Password" id="password">
+          <input type="password" name="password2" placeholder="Retype password" id="password2">
+          <input type="submit" name="signup-button" id="buttonSubmit" value="Sign Up" onclick="return Validate()">
+        </form>
+        </div>
+        <div class="right-box">
+          <span class="signinwith">Sign in with<br/>Social Network     </span>
+        <a href="https://facebook.com" target="_blank"><button class="social facebook">Log in with Facebook</button></a>   
+        <a href="https://twitter.com" target="_blank"><button class="social twitter">Log in with Twitter</button></a> 
+        <a href="https://gmail.com" target="_blank"><button class="social google">Log in with Google+</button></a> 
+            
+        
+        </div>
+        <div class="or">OR</div>
+    </div>
+
+    
+</body>    
+</html>
